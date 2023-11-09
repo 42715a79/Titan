@@ -11,8 +11,10 @@ body {
     flex-direction: column;
 }
  
+/* Main page */
+
 .main-page  {
-    background-color: linear-gradient(270deg, #A8DCFB -4.82%, rgba(205, 238, 255, 0.00) 100%);
+    background: linear-gradient(270deg, #A8DCFB -4.82%, rgba(205, 238, 255, 0.00) 100%);
     height: 100%;
     display: flex;
     flex-direction: column; 
@@ -91,6 +93,8 @@ body {
     align-self: flex-end;
 } 
  
+/* Gus facts */
+
 .gus-facts  {
     padding: 52px 0 72px;
     display: flex;
@@ -98,6 +102,72 @@ body {
     align-items: center;
 }
 
-.gus-title  {
+.ukr-logo {
+    width: 40px;
+    height: 40.211px;
+}
 
+.gus-title  {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100px;
+    color: #161617;
+    margin: 16px 0;
+}
+
+.gus-descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #161617 ;
+    margin: 16px 0;
+}
+
+.gus-facts-container {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.gus-fact-item {
+    width: 33%;
+}
+
+.gus-fact-descr {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #161617;
+    width: 280px;
+}
+
+/* Finish */
+.finish {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.motivation {
+    padding-top: 58px;
+    background: linear-gradient(270deg, #D1EEFF -4.82%, rgba(205, 237, 255, 0.00) 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 1170px;
+    height: 419px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speach {
+    color: #161617;
+    font-size: 64px;
+}
+
+.goal {
+    width: 875px;
+    height: 92px;
+    flex-shrink: 0;
+    text-align: center;
 }
