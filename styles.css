@@ -101,7 +101,58 @@ body {
     flex-shrink: 0;
     float: right;
 } 
- 
+
+.developer {
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+.title-Chr-1 {
+    font-size: 50px;
+    text-align: left;
+    margin-right: 90px;
+    position: relative;
+    top: 50%;
+    margin-top: -25px;
+    /* display: flex; */
+}
+
+.title-Chr-2 {
+    display: flex;
+    font-size: 16px;
+    color: rgb(143, 143, 143);
+}
+
+.Christiaan {
+    width: 500px;
+    height: 650px;
+    display: flex;
+    margin-right: 90px;
+    overflow: hidden;
+    transition: all .125s ease;
+}
+
+.Christiaan:hover {
+    transform: scale(.9);
+}
+
+.Christiaan img {
+    transition: all .125s ease;
+}
+
+.Christiaan:hover img {
+    transform: scale(1.25);
+}
+
+.developer-descr {
+    width: 300px;
+    font-size: 20px;
+    text-align: right;
+}
 /* Gus facts */
 
 .gus-facts  {
