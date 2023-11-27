@@ -2,10 +2,11 @@ html,
 body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
+    /* background: linear-gradient(270deg, rgb(2, 40, 180) -4.82%, #0a3e58  100%); */
 }
 
 .wraper {
-    width: 1170px;
+    width: 1190px;
     margin: 0 auto;
     height: 100%;
     flex-direction: column;
@@ -14,11 +15,12 @@ body {
 /* Main page */
 
 .main-page  {
-    background: linear-gradient(270deg, rgb(13, 29, 88) -4.82%, #0a3e58  100%);
+    background: linear-gradient(270deg, rgb(2, 40, 180) -4.82%, #0a3e58  100%);
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column; 
+
 }
 
 .header {
@@ -34,6 +36,7 @@ body {
 }
 
 .titan-container   {
+    background: #ffff;
     padding: 60px 56px;
     align-self: center;
 }
@@ -59,23 +62,23 @@ body {
     color: rgb(255, 210, 47);
     font-weight: 600;
     font-size: 100px;
-    line-height: 72px;
+    line-height: 80px;
     font-family: 'Playfair Display', serif;
 }
 
 .titan-descr   {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Playfair Display', serif;
     font-family: 'Roboto Slab', serif;
     line-height: 24px;
-    color: #ffffff;
+    color: #000000;
     margin-top: 15px;
     margin-bottom: 48px;
 }
 
 .titan-launch  {
-    background: #8d4e24;
+    background: #ff9249;
     border-radius: 8px;
     padding: 12px 24px;
     font-weight: 400;
@@ -84,24 +87,20 @@ body {
     color: #ffffff;
     cursor: pointer;
 }
-/* .intro-text {
-    color: #C1A100;
-    font-family: 'Kaisei Decol', serif;
-    width: 150px;
-    height: 89px;
-    font-size: 60px;
-} */
+
 .main-page-row {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    align-items: center
 }
 
 .titan-img  {
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
     flex-shrink: 0;
     float: right;
+    
 } 
 
 .developer {
@@ -111,21 +110,19 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    align-items: center;
+    gap: 80px;
+
 }
 
 .title-chr-1 {
-    font-size: 50px;
+    font-size: 70px;
     text-align: left;
-    margin-right: 90px;
-    position: relative;
-    top: 50%;
-    margin-top: -25px;
-    /* display: flex; */
 }
 
 .title-chr-2 {
     display: flex;
-    font-size: 16px;
+    font-size: 20px;
     color: rgb(143, 143, 143);
 }
 
@@ -133,7 +130,7 @@ body {
     width: 500px;
     height: 650px;
     display: flex;
-    margin-right: 90px;
+    /* margin-right: 90px; */
     overflow: hidden;
     transition: all .5s ease;
     border-radius: 60px;
@@ -163,7 +160,7 @@ body {
     opacity: 0;
     transition: all .5s ease;
     color: #fff;
-    font: 600 1.125rem Tahoma;
+    font: 600 1.5rem Tahoma;
     padding: 1.25rem;
     z-index: 30;
 }
@@ -184,14 +181,45 @@ body {
     display: block;
 }
 
+  /* Titan fact */
+.information {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.inf-titan-img {
+    height: 700px;
+}
+
+.inf-titan-img:hover {
+    transform: scale(1.15);
+    transition: all .5s ease;
+}
+
+.text-inf {
+    width: 900px;
+}
+
+.inf-title-titan {
+    font-size: 32px;
+}
+
+.inf-titan {
+    width: 700px;
+}
 
 /* Gus facts */
 
-.information {
-
+.titan-fact-img  {
+    height: 360px;
+    width: 360px;
 }
 
-.gus-facts  {
+.titan-facts  {
     padding: 52px 0 72px;
     display: flex;
     flex-direction: column;
@@ -203,7 +231,7 @@ body {
     height: 40px;
 }
 
-.gus-title  {
+.titan-title  {
     font-weight: 600;
     font-size: 48px;
     line-height: 100px;
@@ -211,28 +239,30 @@ body {
     margin: 16px 0;
 }
 
-.gus-descr {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #161617 ;
-    margin: 16px 0;
-}
-
-.gus-facts-container {
+.titan-facts-container {
+    height: 100%;
+    /* width: 100%; */
     width: 1170px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 }
 
-.gus-fact-item {
+.titan-fact-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100px;
+    color: #161617;
+    margin: 16px 0;
+}
+
+.titan-fact-item {
     width: 33%;
 }
 
-.gus-fact-descr {
+.titan-fact-descr {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 24px;
     color: #161617;
     width: 280px;
@@ -252,7 +282,7 @@ body {
     background: linear-gradient(270deg, #D1EEFF -4.82%, rgba(205, 237, 255, 0.00) 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 1170px;
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -263,9 +293,41 @@ body {
     font-size: 40px;
 }
 
-.goal {
+.finish-descr {
+    flex-direction: row;
+    display: flex;
+    gap: 50px;
+} 
+
+.book {
+    width: 290px;
+    height: 400px;
+}
+
+.book-header{
+    font-weight: bold;
+
+}
+.finish-text {
+    width: 600px;
+}
+
+.book-inf {
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+.book-add-inf {
+    font-size: 16px ;
+    font-family: 'Merriweather', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* .goal {
     width: 875px;
     height: 92px;
     flex-shrink: 0;
     text-align: center;
-}
+} */
