@@ -2,7 +2,8 @@ html,
 body {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
-    /* background: linear-gradient(270deg, rgb(2, 40, 180) -4.82%, #0a3e58  100%); */
+    margin: 0;
+    padding: 0;
 }
 
 .wraper {
@@ -31,17 +32,13 @@ body {
     left: 0;
 }
 
-.logo-text  {
-    margin-left: 18px;
-}
-
 .titan-container   {
     background: #ffff;
     padding: 60px 56px;
     align-self: center;
 }
 
-.banderogus-greeting    {
+.greeting    {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -49,20 +46,20 @@ body {
     margin-bottom: 16px;
 }
 
-.banderogus-start-text {
+.start-text {
     font-weight: 600;
     font-size: 16px ;
     line-height: 24px;
-    color: #161617;
-    margin-top: 24px;
-    margin-bottom: 48px;
+    color: #d39b00;
+    margin-top: 18px;
+    margin-bottom: 28px;
 }
 
-.titan-title   {
-    color: rgb(255, 210, 47);
+.titan-title {
+    color: rgb(0, 0, 0);
     font-weight: 600;
-    font-size: 100px;
-    line-height: 80px;
+    font-size: 80px;
+    line-height: 50px;
     font-family: 'Playfair Display', serif;
 }
 
@@ -74,7 +71,7 @@ body {
     line-height: 24px;
     color: #000000;
     margin-top: 15px;
-    margin-bottom: 48px;
+    margin-bottom: 38px;
 }
 
 .titan-launch  {
@@ -96,33 +93,39 @@ body {
 }
 
 .titan-img  {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     flex-shrink: 0;
     float: right;
     
 } 
 
-.developer {
+/* Про винахідника */
+.cards {
     height: 100%;
     width: 100%;
-    flex-direction: row;
     display: flex;
     justify-content: center;
     padding-top: 50px;
     align-items: center;
-    gap: 80px;
+    gap: 50px;
+}
+
+.developer {
+    
+    flex-direction: row;
+    
 
 }
 
 .title-chr-1 {
-    font-size: 70px;
+    font-size: 60px;
     text-align: left;
 }
 
-.title-chr-2 {
+.grey-mini-text {
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     color: rgb(143, 143, 143);
 }
 
@@ -130,7 +133,6 @@ body {
     width: 500px;
     height: 650px;
     display: flex;
-    /* margin-right: 90px; */
     overflow: hidden;
     transition: all .5s ease;
     border-radius: 60px;
@@ -183,36 +185,149 @@ body {
 
   /* Titan fact */
 .information {
+   
+    flex-direction: row-reverse;
+    background: rgba(0,0,0,0.05) ;
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 70px;
-}
-
-.inf-titan-img {
-    height: 700px;
-}
-
-.inf-titan-img:hover {
-    transform: scale(1.15);
-    transition: all .5s ease;
-}
-
-.text-inf {
-    width: 900px;
+    
 }
 
 .inf-title-titan {
-    font-size: 32px;
+    font-size: 40px;
+    width: 35%;
 }
 
 .inf-titan {
     width: 700px;
 }
 
-/* Gus facts */
+.main-fact-card {
+    width: 390px;
+    height: 700px;
+    display: flex;
+    overflow: hidden;
+    transition: all .5s ease;
+    border-radius: 60px;
+
+    position: relative;
+}
+
+.main-fact-card:hover {
+    transform: scale(.9);
+}
+
+.main-fact-card img {
+    transition: all .5s ease;
+}
+
+.main-fact-card:hover img {
+    transform: scale(1.15);
+}
+
+.main-fact-card:hover .inf-content {
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+}
+
+.inf-content {
+    opacity: 0;
+    transition: all .5s ease;
+    color: #fff;
+    font: 460 1.25rem Tahoma;
+    padding: 1.25rem;
+    z-index: 30;
+}
+
+.main-fact-card:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 20;
+    display: none;
+}
+
+.main-fact-card:hover:after {
+    display: block;
+}
+
+/* Kassini */
+
+.kassini {
+   
+    flex-direction: row;   
+    gap: 30px;
+
+} 
+
+.title-kassini {
+    width: 30% ; 
+}
+
+.title-kassini-1 {
+    font-size: 38px;
+    text-align: left;
+}
+
+.kassini-card {
+    width: 500px;
+    height: 650px;
+    display: flex;
+    overflow: hidden;
+    transition: all .5s ease;
+    border-radius: 60px;
+
+    position: relative;
+}
+
+.kassini-card:hover {
+    transform: scale(.9);
+}
+
+.kassini-card img {
+    transition: all .5s ease;
+}
+
+.kassini-card:hover img {
+    transform: scale(1.15);
+}
+
+.kassini-card:hover .chr-content {
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+}
+
+.chr-content {
+    opacity: 0;
+    transition: all .5s ease;
+    color: #fff;
+    font: 600 1.5rem Tahoma;
+    padding: 1.25rem;
+    z-index: 30;
+}
+
+.kassini-card:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 20;
+    display: none;
+}
+
+.kassini-card:hover:after {
+    display: block;
+}
+
+/* Titan interesting facts */
 
 .titan-fact-img  {
     height: 360px;
@@ -231,7 +346,7 @@ body {
     height: 40px;
 }
 
-.titan-title  {
+.titan-facts-title  {
     font-weight: 600;
     font-size: 48px;
     line-height: 100px;
@@ -241,7 +356,6 @@ body {
 
 .titan-facts-container {
     height: 100%;
-    /* width: 100%; */
     width: 1170px;
     display: flex;
     justify-content: space-between;
@@ -250,8 +364,8 @@ body {
 
 .titan-fact-title {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 100px;
+    font-size: 25px;
+    line-height: 28px;
     color: #161617;
     margin: 16px 0;
 }
@@ -268,6 +382,11 @@ body {
     width: 280px;
 }
 
+.interesting-fact {
+    width: 20px;
+    height: 20px;
+}
+
 /* Finish */
 .finish {
     display: flex;
@@ -282,7 +401,7 @@ body {
     background: linear-gradient(270deg, #D1EEFF -4.82%, rgba(205, 237, 255, 0.00) 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 1170px;
-    height: 600px;
+    height: 650px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,7 +409,9 @@ body {
 
 .speach {
     color: #161617;
-    font-size: 40px;
+    font-size: 48px;
+
+
 }
 
 .finish-descr {
@@ -325,9 +446,3 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .goal {
-    width: 875px;
-    height: 92px;
-    flex-shrink: 0;
-    text-align: center;
-} */
