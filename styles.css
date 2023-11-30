@@ -64,13 +64,11 @@ body {
 }
 
 .titan-descr   {
-    font-weight: 400;
-    font-size: 20px;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 24px;
     color: #000000;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 38px;
 }
 
@@ -100,7 +98,15 @@ body {
     
 } 
 
-/* Про винахідника */
+/* Заголовки та текст до карточок */
+
+.grey-mini-text {
+    display: flex;
+    font-size: 18px;
+    color: rgb(143, 143, 143);
+}
+
+/* Все про структуру та ефекти карточок */
 .cards {
     height: 100%;
     width: 100%;
@@ -111,25 +117,7 @@ body {
     gap: 50px;
 }
 
-.developer {
-    
-    flex-direction: row;
-    
-
-}
-
-.title-chr-1 {
-    font-size: 60px;
-    text-align: left;
-}
-
-.grey-mini-text {
-    display: flex;
-    font-size: 18px;
-    color: rgb(143, 143, 143);
-}
-
-.chr-card {
+.card {
     width: 500px;
     height: 650px;
     display: flex;
@@ -140,25 +128,25 @@ body {
     position: relative;
 }
 
-.chr-card:hover {
+.card:hover {
     transform: scale(.9);
 }
 
-.chr-card img {
+.card img {
     transition: all .5s ease;
 }
 
-.chr-card:hover img {
+.card:hover img {
     transform: scale(1.15);
 }
 
-.chr-card:hover .chr-content {
+.card:hover .card-content {
     position: absolute;
     bottom: 0;
     opacity: 1;
 }
 
-.chr-content {
+.card-content {
     opacity: 0;
     transition: all .5s ease;
     color: #fff;
@@ -167,7 +155,7 @@ body {
     z-index: 30;
 }
 
-.chr-card:after {
+.card:after {
     content: '';
     position: absolute;
     left: 0;
@@ -179,86 +167,43 @@ body {
     display: none;
 }
 
-.chr-card:hover:after {
+.card:hover:after {
     display: block;
 }
 
-  /* Titan fact */
-.information {
-   
-    flex-direction: row-reverse;
-    background: rgba(0,0,0,0.05) ;
+/* Про винахідника */
 
-    
+.developer {  
+    flex-direction: row;
+}
+
+.title-chr-1 {
+    font-size: 60px;
+    text-align: left;
+}
+
+  /* Про атмосферу на Титані */
+.information {
+    flex-direction: row-reverse;
+    background: rgba(0,0,0,0.09);
+}
+
+.title-information {
+    width: 30%;
 }
 
 .inf-title-titan {
     font-size: 40px;
-    width: 35%;
+    text-align: left;
 }
 
 .inf-titan {
     width: 700px;
 }
 
-.main-fact-card {
-    width: 390px;
-    height: 700px;
-    display: flex;
-    overflow: hidden;
-    transition: all .5s ease;
-    border-radius: 60px;
-
-    position: relative;
-}
-
-.main-fact-card:hover {
-    transform: scale(.9);
-}
-
-.main-fact-card img {
-    transition: all .5s ease;
-}
-
-.main-fact-card:hover img {
-    transform: scale(1.15);
-}
-
-.main-fact-card:hover .inf-content {
-    position: absolute;
-    bottom: 0;
-    opacity: 1;
-}
-
-.inf-content {
-    opacity: 0;
-    transition: all .5s ease;
-    color: #fff;
-    font: 460 1.25rem Tahoma;
-    padding: 1.25rem;
-    z-index: 30;
-}
-
-.main-fact-card:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    z-index: 20;
-    display: none;
-}
-
-.main-fact-card:hover:after {
-    display: block;
-}
-
 /* Kassini */
 
 .kassini {
-   
     flex-direction: row;   
     gap: 30px;
 
@@ -273,61 +218,7 @@ body {
     text-align: left;
 }
 
-.kassini-card {
-    width: 500px;
-    height: 650px;
-    display: flex;
-    overflow: hidden;
-    transition: all .5s ease;
-    border-radius: 60px;
-
-    position: relative;
-}
-
-.kassini-card:hover {
-    transform: scale(.9);
-}
-
-.kassini-card img {
-    transition: all .5s ease;
-}
-
-.kassini-card:hover img {
-    transform: scale(1.15);
-}
-
-.kassini-card:hover .chr-content {
-    position: absolute;
-    bottom: 0;
-    opacity: 1;
-}
-
-.chr-content {
-    opacity: 0;
-    transition: all .5s ease;
-    color: #fff;
-    font: 600 1.5rem Tahoma;
-    padding: 1.25rem;
-    z-index: 30;
-}
-
-.kassini-card:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-    z-index: 20;
-    display: none;
-}
-
-.kassini-card:hover:after {
-    display: block;
-}
-
-/* Titan interesting facts */
+/* Цікаві факти про Титан */
 
 .titan-fact-img  {
     height: 360px;
@@ -339,6 +230,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: rgba(0,0,0,0.09);
 }
 
 .saturn {
@@ -352,6 +244,7 @@ body {
     line-height: 100px;
     color: #161617;
     margin: 16px 0;
+    font-family: 'Playfair Display', serif;
 }
 
 .titan-facts-container {
@@ -368,6 +261,7 @@ body {
     line-height: 28px;
     color: #161617;
     margin: 16px 0;
+    font-family: 'Playfair Display', serif;
 }
 
 .titan-fact-item {
@@ -375,8 +269,8 @@ body {
 }
 
 .titan-fact-descr {
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 24px;
     color: #161617;
     width: 280px;
@@ -387,8 +281,8 @@ body {
     height: 20px;
 }
 
-/* Finish */
-.finish {
+/* Використані джерела */
+.book {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -396,9 +290,9 @@ body {
     padding-bottom: 50px;
 }
 
-.motivation {
+.book-box {
     padding-top: 58px;
-    background: linear-gradient(270deg, #D1EEFF -4.82%, rgba(205, 237, 255, 0.00) 100%);
+    background: linear-gradient(270deg, #acd9f3 -4.82%, rgba(75, 171, 226, 0) 100%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     width: 1170px;
     height: 650px;
@@ -407,20 +301,19 @@ body {
     align-items: center;
 }
 
-.speach {
-    color: #161617;
+.book-title {
+    color: #060609;
     font-size: 48px;
-
-
+    font-family: 'Playfair Display', serif;
 }
 
-.finish-descr {
+.book-descr{
     flex-direction: row;
     display: flex;
     gap: 50px;
 } 
 
-.book {
+.book-img {
     width: 290px;
     height: 400px;
 }
@@ -429,11 +322,12 @@ body {
     font-weight: bold;
 
 }
-.finish-text {
+.book-text {
     width: 600px;
 }
 
 .book-inf {
+    font-weight: 500;
     font-size: 20px;
     font-family: 'Merriweather', serif;
     font-family: 'Montserrat', sans-serif;
